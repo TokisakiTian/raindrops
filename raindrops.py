@@ -1,8 +1,11 @@
 def convert(number):
-    """В возврящаемую строку дописываются:
-'Pling', если число number делится на 3,
-'Plang', если число number делится на 5,
-'Plong', если число number делится на 7,
-само число number, если оно не делится ни на 3, ни на 5, ни на 7."""
-    # Напишите ваш код здесь
-    return str(number) # эту строку можно удалить
+    b = ''
+    if number % 3 == 0:
+        b += 'Pling'
+    if number % 5 == 0:
+        b += 'Plang'
+    if number % 7 == 0:
+        b += 'Plong'
+    if b == '':
+        return str(number)
+    return b
